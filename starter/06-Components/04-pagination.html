@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Component</title>
+    <style>
+      /* SPACING SYSTEM (px)
+       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+       FONT SIZE SYSTEM (px)
+       10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 / 128 */
+
+      /* MAIN COLOR: #087f5b
+         GREY COLOR: #343a40 */
+
+      :root {
+        --primary: #087f5b;
+        --primary-light: #099268;
+        --font: #343a40;
+        --font-light: #868e96;
+        --white: #e6fcf5;
+        --white-second: #c3fae8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--font);
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pagination {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.9;
+      }
+
+      .btn {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 1px solid var(--primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn:hover {
+        background-color: var(--primary);
+      }
+      .btn:hover .btn-icon {
+        stroke: #fff;
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: var(--primary);
+      }
+
+      .link:link,
+      .link:visited {
+        text-decoration: none;
+        color: var(--font);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+      }
+
+      .link:hover,
+      .link:active,
+      .link.active {
+        background-color: var(--primary);
+        color: #fff;
+      }
+
+      .dots {
+        color: var(--font-light);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagination">
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <a href="#" class="link">1</a>
+      <a href="#" class="link">2</a>
+      <a href="#" class="link active">3</a>
+      <a href="#" class="link">4</a>
+      <a href="#" class="link">5</a>
+      <a href="#" class="link">6</a>
+      <span class="dots">...</span>
+      <a href="#" class="link">23</a>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
